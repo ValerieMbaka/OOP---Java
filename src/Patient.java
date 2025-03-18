@@ -7,7 +7,7 @@ public class Patient {
         private String gender;
         private short yob;
         
-        public Patient(){
+        public Patient() {
                 System.out.println("Enter patient's name: ");
                 name = reader.nextLine();
                 System.out.println("Enter patient's gender: ");
@@ -18,12 +18,12 @@ public class Patient {
                 hospital = reader.nextLine();
         }
         
-        public void setHospital(){
+        public void setHospital() {
                 System.out.print("Enter new name of the hospital: ");
                 hospital = reader.nextLine();
         }
         
-        public void setName(){
+        public void setName() {
                 System.out.println("Patient's name is " + name + "\nEnter new name for " + name);
                 name = reader.nextLine();
         }
@@ -32,7 +32,7 @@ public class Patient {
                 return name;
         }
         
-        public void setGender(){
+        public void setGender() {
                 System.out.println("Patient's gender is " + gender + "\nEnter new gender: ");
                 gender = reader.nextLine();
         }
@@ -41,7 +41,7 @@ public class Patient {
                 return gender;
         }
         
-        public void setYob(){
+        public void setYob() {
                 System.out.println("Patient's year of birth is " + name + "\nEnter new year of birth: ");
                 yob = reader.nextShort();
         }
@@ -50,18 +50,18 @@ public class Patient {
                 return yob;
         }
         
-        public void viewDetails(){
+        public void viewDetails() {
                 System.out.println("Name: " + name);
                 System.out.println("Gender: " + gender);
                 System.out.println("Year of Birth: " + yob);
                 System.out.println("Hospital: " + hospital);
         }
         
-        public static void array1(){
+        public static void array1() {
                 String[] names = {"John", "Jane", "Peter"};
                 String[] places = new String[4];
                 
-                for (byte x = 0; x < places.length; x++){
+                for (byte x = 0; x < places.length; x++) {
                         System.out.println("Enter place " + (x + 1) + " you wish to visit: ");
                         places[x] = reader.nextLine();
                 }
