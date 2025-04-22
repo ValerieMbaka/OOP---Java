@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class ControlCollection extends JFrame {
+public class ControlCollection extends JFrame implements ActionListener {
         private JLabel operationLabel = new JLabel("Operation");
         private JLabel num1Label = new JLabel("Num 1");
         private JLabel num2Label = new JLabel("Num 2");
@@ -72,10 +74,39 @@ public class ControlCollection extends JFrame {
                 add(new JLabel("Games"));
                 JComboBox cboGames = new JComboBox(games);
                 add(cboGames);
+                
+                // Register the listener to the Operation radio buttons
+                btnSum.addActionListener(this);
+                btnProduct.addActionListener(this);
+                btnDifference.addActionListener(this);
+                
         }
         
         public static void main(String[] args) {
+                
                 new ControlCollection();
+                
         }
+        
+        // Implementing listeners on the Operation radio buttons
+        @Override
+        public void actionPerformed(ActionEvent e) {
+                int val1 = Integer.parseInt(num1Field.getText().trim());
+                int val2 = Integer.parseInt(num2Field.getText().trim());
+                int result;
+                if (e.getSource() == btnSum) {
+                        result = val1 + val2;
+                        resultField.setText(Integer.toString(result));         // Write the result to the result field
+                }
+                if (e.getActionCommand().equals("Product")) {
+                        result = val1 * val2;
+                        resultField.setText(Integer.toString(result));         // Write the result to the result field
+                }
+                if (e.getActionCommand().equals("Difference")) {
+                        result = val1 - val2;
+                        resultField.setText(Integer.toString(result));         // Write the result to the result field
+                }
+        }
+        
 }
 
