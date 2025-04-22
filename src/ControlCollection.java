@@ -9,9 +9,9 @@ public class ControlCollection extends JFrame {
         private JTextField num1Field = new JTextField(5);
         private JTextField num2Field = new JTextField(5);
         private JTextField resultField = new JTextField(10);
-        private JRadioButton sumButton, productButton, differenceButton;
+        private JRadioButton btnSum, btnProduct, btnDifference;
         private JLabel genderLabel = new JLabel("Gender");
-        private JRadioButton  femaleButton, maleButton;
+        private JRadioButton  btnFemale, btnMale;
         private JCheckBox readingBox, swimmingBox, travellingBox;
         
         public ControlCollection() {
@@ -29,30 +29,30 @@ public class ControlCollection extends JFrame {
                 add(resultField);
                 resultField.setEditable(false);
                 
-                sumButton = new JRadioButton("Sum");
-                productButton = new JRadioButton("Product");
-                differenceButton = new JRadioButton("Difference");
+                btnSum = new JRadioButton("Sum");
+                btnProduct = new JRadioButton("Product");
+                btnDifference = new JRadioButton("Difference");
                 
                 ButtonGroup opr = new ButtonGroup();
-                opr.add(sumButton);
-                opr.add(productButton);
-                opr.add(differenceButton);
+                opr.add(btnSum);
+                opr.add(btnProduct);
+                opr.add(btnDifference);
                 
                 add(operationLabel);
-                add(sumButton);
-                add(productButton);
-                add(differenceButton);
+                add(btnSum);
+                add(btnProduct);
+                add(btnDifference);
                 
-                femaleButton = new JRadioButton("Female");
-                maleButton = new JRadioButton("Male");
+                btnFemale = new JRadioButton("Female");
+                btnMale = new JRadioButton("Male");
                 
                 ButtonGroup gender = new ButtonGroup();
-                gender.add(femaleButton);
-                gender.add(maleButton);
+                gender.add(btnFemale);
+                gender.add(btnMale);
                 
                 add(genderLabel);
-                add(femaleButton);
-                add(maleButton);
+                add(btnFemale);
+                add(btnMale);
                 
                 readingBox = new JCheckBox("Reading");
                 swimmingBox = new JCheckBox("Swimming");
