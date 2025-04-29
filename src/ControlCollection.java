@@ -98,10 +98,12 @@ public class ControlCollection extends JFrame implements ActionListener {
                         result = val1 + val2;
                         resultField.setText(Integer.toString(result));         // Write the result to the result field
                 }
+                
                 if (e.getActionCommand().equals("Product")) {
                         result = val1 * val2;
                         resultField.setText(Integer.toString(result));         // Write the result to the result field
                 }
+                
                 if (e.getActionCommand().equals("Difference")) {
                         result = val1 - val2;
                         resultField.setText(Integer.toString(result));         // Write the result to the result field
