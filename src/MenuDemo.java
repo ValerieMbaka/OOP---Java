@@ -41,14 +41,14 @@ public class MenuDemo extends JFrame implements ActionListener {
                 
                 mnuHelp.add(mniOnline);
                 
-                mniExit.addActionListener(this);
+//                mniExit.addActionListener(this);
                 
-                // mniExit.addActionListener(e -> {
-                //    int x = JOptionPane.showConfirmDialog(this, "Are you sure you want to Exit?");
-                //    if (x == 0) {
-                //        System.exit(0);
-                //    }
-                // });
+                 mniExit.addActionListener(e -> {
+                         int x = JOptionPane.showConfirmDialog(this, "Are you sure you want to Exit?");
+                        if (x == 0) {
+                                System.exit(0);
+                        }
+                 });
                 
         }
         
